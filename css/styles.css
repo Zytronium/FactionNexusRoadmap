@@ -30,7 +30,7 @@ h1 {
 }
 
 hr {
-    border-color: var(--color-accent); // yes you can -->
+    border-color: var(--color-accent);
     border-style: ridge;
     opacity: 90%;
     margin: 40px 0 5px 0;
