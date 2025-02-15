@@ -1,0 +1,181 @@
+/* Global Styles for The Faction Nexus Roadmap */
+body {
+    font-family: 'Oxanium', sans-serif;
+    color: var(--color-text);
+    background-image: url('../images/background_image.png');
+    background-repeat: no-repeat;
+    background-size: auto;
+    scrollbar-color: var(--color-secondary) var(--darker-gray); /* thumb color track color */
+    scrollbar-width: thin; /* Thin scrollbar */
+}
+
+a:link {
+    color: #00ffbb;
+}
+a:visited {
+    color: var(--color-accent);
+}
+a:active {
+    color: royalblue;
+}
+
+a img {
+    transform: translate(0, 4px);
+}
+
+hr {
+    border-color: var(--color-accent);
+    border-style: ridge;
+    opacity: 90%;
+    margin: 5px 0;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 0.25em 0;
+    font-size: 0.7em;
+    background-color: rgba(8, 8, 8, 0.667);
+    color: #888;
+}
+
+footer a {
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Title styling */
+.title {
+    position: relative;
+    text-align: center;
+    font-size: 56px;
+    font-weight: bold;
+    text-shadow:
+            0 0 10px rgba(0, 230, 255, 0.8), /* Cyan glow */
+            0 0 20px rgba(0, 230, 255, 0.6),
+            0 0 30px rgba(0, 230, 255, 0.4);
+    margin-bottom: 20px;
+}
+
+/* Container for centering content */
+.container {
+    position: relative;
+    text-align: center;
+    padding: 20px;
+    font-size: 20px;
+    max-width: 728px;
+    margin: 2rem auto;
+    top: 20%;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(15px);
+}
+
+.links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 0.75rem 0;
+    top: 20%;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(15px);
+}
+
+.links a {
+    text-align: center;
+    padding: 0.75rem 1rem;
+    font-size: 20px;
+    margin: 0.125em 0.4em;
+    top: 20%;
+    background: var(--darker-gray);
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(15px);
+    text-decoration: none;
+    color: var(--color-primary);
+
+}
+
+/* Paragraph styling */
+.container p {
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: start;
+    margin-bottom: 20px;
+}
+
+/* Entire scrollbar */
+::-webkit-scrollbar {
+    width: 12px; /* Width of the vertical scrollbar */
+    height: 12px; /* Height of the horizontal scrollbar */
+}
+
+/* Scrollbar track */
+::-webkit-scrollbar-track {
+    background: var(--darker-gray); /* Track color */
+    border-radius: 6px; /* Rounded corners */
+}
+
+/* Scrollbar thumb (draggable part) */
+::-webkit-scrollbar-thumb {
+    background: var(--color-primary); /* Thumb color */
+    border-radius: 6px; /* Rounded corners */
+    border: 3px solid var(--darker-gray); /* Creates a gap between thumb and track */
+}
+
+/* Hover effect on scrollbar thumb */
+::-webkit-scrollbar-thumb:hover {
+    background: var(--cyan-300); /* Thumb color on hover */
+}
+
+/* Active (clicked) effect on scrollbar thumb */
+::-webkit-scrollbar-thumb:active {
+    background: var(--color-secondary); /* Thumb color when actively dragged */
+}
+
+/* Optional: Disable scrollbar buttons (arrows) */
+::-webkit-scrollbar-button {
+    display: none; /* Hides the arrows */
+}
+
+@font-face {
+    font-family: 'Oxanium';
+    src: url('../fonts/Oxanium-VariableFont_wght.ttf');
+}
+
+@media (max-width: 768px) {
+    .links {
+        flex-direction: column;
+    }
+
+    .title {
+        font-size: 52px;
+    }
+
+    .subtitle {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 680px) {
+    .title {
+        font-size: 36px;
+    }
+
+    .subtitle {
+        font-size: 22px;
+    }
+}

@@ -1,0 +1,20 @@
+:root {
+    --color-primary: #00e6ff; /* Cyan Primary */
+    --color-secondary: #00a3b4; /* Dark Cyan Secondary */
+    --color-tertiary: #ffbf1e; /* Gold Tertiary */
+    --color-accent: #8460ef; /* Purple Accent */
+    --color-background: #080808; /* Background color */
+    --color-text: #ffffff; /* Text color */
+
+    /* Additional Colors */
+    --darker-gray: #0f0e15;
+    --gray: #13161a;
+    --lighter-gray: #3b4046;
+    --cyan-500: #00a3b4;
+    --cyan-300: #00bfd9;
+
+    /* New Colors */
+    --color-hover: var(--lighter-gray); /* Lighter gray for hover effects */
+    --color-border: var(--cyan-300); /* Cyan-300 for borders */
+    --color-highlight: var(--color-tertiary); /* Gold tertiary for highlights */
+}
