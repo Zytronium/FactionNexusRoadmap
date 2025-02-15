@@ -147,11 +147,13 @@ footer a:hover {
 .item-title {
     width: fit-content;
     margin-left: 1vw;
+    margin-bottom: 0;
+    margin-top: 10px;
 }
 
 .item-description {
-
-
+    font-size: 16px !important;
+    margin-bottom: 10px !important;
 }
 
 
@@ -164,7 +166,6 @@ footer a:hover {
 /* Scrollbar track */
 ::-webkit-scrollbar-track {
     background: var(--darker-gray);
-    border-radius: 6px;
 }
 
 /* Scrollbar thumb (draggable part) */
