@@ -5,8 +5,10 @@ body {
     background-image: url('../images/background_image.png');
     background-repeat: no-repeat;
     background-size: auto;
-    scrollbar-color: var(--color-secondary) var(--darker-gray); /* thumb color track color */
-    scrollbar-width: thin; /* Thin scrollbar */
+    background-attachment: fixed;
+    scrollbar-color: var(--color-secondary) var(--darker-gray);
+    scrollbar-width: thin;
+    margin: 0;
 }
 
 a:link {
@@ -41,6 +43,7 @@ main {
 footer {
     text-align: center;
     padding: 0.25em 0;
+    margin-top: 10px;
     font-size: 0.7em;
     background-color: rgba(8, 8, 8, 0.667);
     color: #888;
@@ -61,25 +64,10 @@ footer a:hover {
     font-size: 56px;
     font-weight: bold;
     text-shadow:
-            0 0 10px rgba(0, 230, 255, 0.8), /* Cyan glow */
+            0 0 10px rgba(0, 230, 255, 0.8),
             0 0 20px rgba(0, 230, 255, 0.6),
             0 0 30px rgba(0, 230, 255, 0.4);
     margin-bottom: 20px;
-}
-
-/* Container for centering content */
-.container {
-    position: relative;
-    text-align: center;
-    padding: 20px;
-    font-size: 20px;
-    max-width: 728px;
-    margin: 2rem auto;
-    top: 20%;
-    background: rgba(0, 0, 0, 0.6);
-    border-radius: 15px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
-    backdrop-filter: blur(15px);
 }
 
 .links {
@@ -106,10 +94,30 @@ footer a:hover {
     backdrop-filter: blur(15px);
     text-decoration: none;
     color: var(--color-primary);
-
+    transition: 1s;
 }
 
-/* Paragraph styling */
+.links a:hover {
+    scale: 1.0625;
+    transition: 0.333s;
+}
+
+/* Container for centering content */
+.container {
+    position: relative;
+    text-align: center;
+    padding: 20px;
+    font-size: 20px;
+    max-width: 900px;
+    margin: 2rem 2rem;
+    top: 20%;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(15px);
+    transition: height 1s ease;
+}
+
 .container p {
     font-size: 18px;
     line-height: 1.6;
@@ -117,38 +125,63 @@ footer a:hover {
     margin-bottom: 20px;
 }
 
+.item {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background: var(--color-background);
+    border: 1px solid var(--color-border);
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 15px 0;
+    transition: transform 0.15s ease, box-shadow 0.1s ease, scale 0.1s ease, height 1s ease;
+}
+
+.item:hover {
+    transform: translateY(-2.5px);
+    scale: 1.02;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+.item-title {
+    width: fit-content;
+    margin-left: 1vw;
+}
+
+.item-description {
+
+
+}
+
+
 /* Entire scrollbar */
 ::-webkit-scrollbar {
-    width: 12px; /* Width of the vertical scrollbar */
-    height: 12px; /* Height of the horizontal scrollbar */
+    width: 12px;
+    height: 12px;
 }
 
 /* Scrollbar track */
 ::-webkit-scrollbar-track {
-    background: var(--darker-gray); /* Track color */
-    border-radius: 6px; /* Rounded corners */
+    background: var(--darker-gray);
+    border-radius: 6px;
 }
 
 /* Scrollbar thumb (draggable part) */
 ::-webkit-scrollbar-thumb {
-    background: var(--color-primary); /* Thumb color */
-    border-radius: 6px; /* Rounded corners */
-    border: 3px solid var(--darker-gray); /* Creates a gap between thumb and track */
+    background: var(--color-primary);
+    border-radius: 6px;
+    border: 3px solid var(--darker-gray);
 }
 
 /* Hover effect on scrollbar thumb */
 ::-webkit-scrollbar-thumb:hover {
-    background: var(--cyan-300); /* Thumb color on hover */
+    background: var(--cyan-300);
 }
 
 /* Active (clicked) effect on scrollbar thumb */
 ::-webkit-scrollbar-thumb:active {
-    background: var(--color-secondary); /* Thumb color when actively dragged */
-}
-
-/* Optional: Disable scrollbar buttons (arrows) */
-::-webkit-scrollbar-button {
-    display: none; /* Hides the arrows */
+    background: var(--color-secondary);
 }
 
 @font-face {
