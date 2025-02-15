@@ -170,24 +170,41 @@ footer a:hover {
     color: lightgray;
 }
 
-.todo {
-    background-color: var(--color-todo);
+/* Item type backgrounds */
+
+.completed {
+    background-color: var(--color-completed);
+    border-color: var(--color-completed-border);
 }
 
 .in-progress {
     background-color: var(--color-in-progress);
+    border-color: var(--color-in-progress-border);
 }
 
-.completed {
-    background-color: var(--color-completed);
+.on-hold {
+    background-color: var(--color-on-hold);
+    border-color: var(--color-on-hold-border);
+}
+
+.next-priority {
+    background-color: var(--color-next-priority);
+    border-color: var(--color-next-priority-border);
+}
+
+.todo {
+    background-color: var(--color-todo);
+    border-color: var(--color-todo-border);
 }
 
 .live {
     background-color: var(--color-live);
+    border-color: var(--color-live-border);
 }
 
 .shelved {
     background-color: var(--color-shelved);
+    border-color: var(--color-shelved-border);
 }
 
 /* Entire scrollbar */

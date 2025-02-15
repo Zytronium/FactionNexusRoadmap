@@ -7,11 +7,21 @@
     --color-text: #ffffff; /* Text color */
 
     /* Roadmap Widget Colors */
-    --color-todo: rgba(51, 51, 10, 0.3);
-    --color-in-progress: rgba(15, 16, 77, 0.2);
-    --color-completed: rgba(14, 71, 58, 0.2);
-    --color-live: rgba(15, 77, 20, 0.2);
-    --color-shelved: rgba(51, 64, 61, 0.2);
+    /* HSBA FORMAT: 80% saturation, 40% brightness, 20% alpha */
+    --color-completed: rgba(20, 52, 102, 0.2);
+    --color-completed-border: rgba(20, 52, 102, 0.75);
+    --color-in-progress: rgba(20, 102, 94, 0.2);
+    --color-in-progress-border: rgba(20, 102, 94, 0.75);
+    --color-on-hold: rgba(90, 20, 102, 0.2);
+    --color-on-hold-border: rgba(90, 20, 102, 0.75);
+    --color-next-priority: rgba(102, 39, 20, 0.2);
+    --color-next-priority-border: rgba(102, 39, 20, 0.75);
+    --color-todo: rgba(102, 80, 20, 0.2);
+    --color-todo-border: rgba(102, 80, 20, 0.75);
+    --color-live: rgba(20, 102, 41, 0.2);
+    --color-live-border: rgba(20, 102, 41, 0.75);
+    --color-shelved: rgba(98, 99, 115, 0.2);
+    --color-shelved-border: rgba(98, 99, 115, 0.75);
 
     /* Additional Colors */
     --darker-gray: #0f0e15;
