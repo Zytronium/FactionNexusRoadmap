@@ -8,16 +8,16 @@
 
     /* Roadmap Widget Colors */
     /* HSBA FORMAT: 80% saturation, 40% brightness, 20% alpha */
-    --color-completed: rgba(20, 52, 102, 0.2);
-    --color-completed-border: rgba(20, 52, 102, 0.75);
-    --color-in-progress: rgba(20, 102, 94, 0.2);
-    --color-in-progress-border: rgba(20, 102, 94, 0.75);
-    --color-on-hold: rgba(90, 20, 102, 0.2);
-    --color-on-hold-border: rgba(90, 20, 102, 0.75);
-    --color-next-priority: rgba(102, 39, 20, 0.2);
-    --color-next-priority-border: rgba(102, 39, 20, 0.75);
-    --color-todo: rgba(102, 80, 20, 0.2);
-    --color-todo-border: rgba(102, 80, 20, 0.75);
+    --color-completed: rgba(20, 102, 94, 0.2);
+    --color-completed-border: rgba(20, 102, 94, 0.75);
+    --color-in-progress: rgba(102, 80, 20, 0.2);
+    --color-in-progress-border: rgba(102, 80, 20, 0.75);
+    --color-on-hold: rgba(102, 39, 20, 0.2);
+    --color-on-hold-border: rgba(102, 39, 20, 0.75);
+    --color-next-priority: rgba(90, 20, 102, 0.2);
+    --color-next-priority-border: rgba(90, 20, 102, 0.75);
+    --color-todo: rgba(20, 52, 102, 0.2);
+    --color-todo-border: rgba(20, 52, 102, 0.75);
     --color-live: rgba(20, 102, 41, 0.2);
     --color-live-border: rgba(20, 102, 41, 0.75);
     --color-shelved: rgba(98, 99, 115, 0.2);
