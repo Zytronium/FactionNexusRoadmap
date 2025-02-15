@@ -25,11 +25,15 @@ a img {
     transform: translate(0, 4px);
 }
 
+h1 {
+    margin: 5px 0;
+}
+
 hr {
-    border-color: var(--color-accent);
+    border-color: var(--color-accent); // yes you can -->
     border-style: ridge;
     opacity: 90%;
-    margin: 5px 0;
+    margin: 40px 0 5px 0;
 }
 
 main {
@@ -67,7 +71,6 @@ footer a:hover {
             0 0 10px rgba(0, 230, 255, 0.8),
             0 0 20px rgba(0, 230, 255, 0.6),
             0 0 30px rgba(0, 230, 255, 0.4);
-    margin-bottom: 20px;
 }
 
 .links {
@@ -156,6 +159,36 @@ footer a:hover {
     margin-bottom: 10px !important;
 }
 
+.item-upper-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.item-type-text {
+    transform: translate(0, -20px);
+    color: lightgray;
+}
+
+.todo {
+    background-color: var(--color-todo);
+}
+
+.in-progress {
+    background-color: var(--color-in-progress);
+}
+
+.completed {
+    background-color: var(--color-completed);
+}
+
+.live {
+    background-color: var(--color-live);
+}
+
+.shelved {
+    background-color: var(--color-shelved);
+}
 
 /* Entire scrollbar */
 ::-webkit-scrollbar {

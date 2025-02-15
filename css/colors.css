@@ -6,6 +6,13 @@
     --color-background: #080808; /* Background color */
     --color-text: #ffffff; /* Text color */
 
+    /* Roadmap Widget Colors */
+    --color-todo: rgba(51, 51, 10, 0.3);
+    --color-in-progress: rgba(15, 16, 77, 0.2);
+    --color-completed: rgba(14, 71, 58, 0.2);
+    --color-live: rgba(15, 77, 20, 0.2);
+    --color-shelved: rgba(51, 64, 61, 0.2);
+
     /* Additional Colors */
     --darker-gray: #0f0e15;
     --gray: #13161a;
