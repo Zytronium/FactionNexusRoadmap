@@ -26,6 +26,10 @@ h1 {
     margin: 5px 0;
 }
 
+h2 {
+    font-size: 30px;
+}
+
 hr {
     border-color: var(--color-accent);
     border-style: ridge;
@@ -171,7 +175,6 @@ footer a:hover {
 }
 
 .item-title {
-    font-size: 30px;
     width: fit-content;
     margin-left: 0.25vw;
     margin-bottom: 0;
