@@ -2,10 +2,7 @@
 body {
     font-family: 'Oxanium', sans-serif;
     color: var(--color-text);
-    background-image: url('../images/background_image.png');
-    background-repeat: no-repeat;
-    background-size: auto;
-    background-attachment: fixed;
+    background-color: var(--color-background);
     scrollbar-color: var(--color-secondary) var(--darker-gray);
     scrollbar-width: thin;
     margin: 0;
@@ -59,6 +56,32 @@ footer a {
 
 footer a:hover {
     text-decoration: underline;
+}
+
+/* Background video container */
+.video-container {
+    position: fixed;
+    top: -2.5%;
+    left: -2.5%;
+    width: 105%;
+    height: 105%;
+    object-fit: cover;
+    z-index: -5;
+    filter: blur(5px);
+    background: url('images/background_image.png') no-repeat center center/cover;
+    overflow: hidden; /* Ensures no overflow issues */
+    user-input: none;
+}
+
+#background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 105%;
+    height: 105%;
+    object-fit: cover;
+    z-index: -2;
+    filter: blur(5px);
 }
 
 /* Title styling */
@@ -205,6 +228,40 @@ footer a:hover {
 .shelved {
     background-color: var(--color-shelved);
     border-color: var(--color-shelved-border);
+}
+
+/* Priority Meter */
+
+.priority-meter {
+    display: flex;
+    flex-direction: row;
+    position: relative; /* For positioning the tooltip */
+    margin-bottom: 20px; /* Add space between priority meters */
+}
+
+[class^="priority-icon-"] {
+    width: 15px;
+    height: 15px;
+    border-radius: 45%;
+    margin-right: 10px;
+    background-color: dimgray;
+}
+
+/* Tooltip styling for individual meters */
+.priority-meter:hover::after {
+    content: attr(data-tooltip); /* Show the tooltip text */
+    position: absolute;
+    top: -30px; /* Position it above the meter */
+    right: 87%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 12px;
+    white-space: nowrap;
+    z-index: 1;
+    width: max-content;
 }
 
 /* Entire scrollbar */

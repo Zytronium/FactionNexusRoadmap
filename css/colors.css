@@ -7,7 +7,7 @@
     --color-text: #ffffff; /* Text color */
 
     /* Roadmap Widget Colors */
-    /* HSBA FORMAT: 80% saturation, 40% brightness, 20% alpha */
+    /* HSBA FORMAT: 80% saturation, 40% brightness, 20% alpha; BORDERS: 75% alpha */
     --color-completed: rgba(20, 102, 94, 0.2);
     --color-completed-border: rgba(20, 102, 94, 0.75);
     --color-in-progress: rgba(102, 80, 20, 0.2);
@@ -22,6 +22,13 @@
     --color-live-border: rgba(20, 102, 41, 0.75);
     --color-shelved: rgba(98, 99, 115, 0.2);
     --color-shelved-border: rgba(98, 99, 115, 0.75);
+
+    /* Priority Colors */
+    --priority-1: rgb(31, 102, 20);
+    --priority-2: rgb(97, 102, 20);
+    --priority-3: rgb(102, 64, 20);
+    --priority-4: rgb(102, 23, 20);
+    --priority-5: rgb(102, 20, 76);
 
     /* Additional Colors */
     --darker-gray: #0f0e15;

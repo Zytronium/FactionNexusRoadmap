@@ -56,4 +56,39 @@ document.addEventListener("DOMContentLoaded", function() {
         type_text.textContent = type.charAt(0).toUpperCase() + type.substring(1).replace('-', ' ');
 
     });
+
+// Function to update icon colors based on priority value
+    function updatePriorityIcons(priorityMeter) {
+        const priorityValue = parseInt(priorityMeter.getAttribute('data-priority'), 10);
+
+        const icons = priorityMeter.querySelectorAll('[class^="priority-icon-"]');
+
+        // Update colors based on the priority value
+        icons.forEach((icon, index) => {
+            const iconPriority = index + 1; // Icon index starts at 0, so we add 1
+
+            if (iconPriority <= priorityValue) {
+                // Apply the appropriate color based on priority
+                icon.style.backgroundColor = `var(--priority-${iconPriority})`;
+            } else {
+                // Set icons beyond the priority to gray
+                icon.style.backgroundColor = 'dimgray'; //test
+            }
+        });
+
+        // Update the tooltip text based on priority value
+        const priorityText = [
+            'Minimal',  // Priority 1
+            'Low',      // Priority 2
+            'Medium',   // Priority 3
+            'High',     // Priority 4
+            'Urgent'    // Priority 5
+        ];
+
+        priorityMeter.setAttribute('data-tooltip', priorityText[priorityValue - 1]);
+    }
+
+// Run the function for each priority meter
+    document.querySelectorAll('.priority-meter').forEach(updatePriorityIcons);
+
 });

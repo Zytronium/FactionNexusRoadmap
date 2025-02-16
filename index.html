@@ -7,7 +7,16 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+
 <main>
+    <!-- Background Video -->
+    <div class="video-container">
+        <video id="background-video" autoplay loop muted>
+            <source src="videos/background-video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
     <div class="container">
         <h1 class="title">The Faction Nexus</h1>
     </div>
@@ -35,23 +44,43 @@
 
         <h2 class="subtitle">Completed:</h2>
 
+
+
         <div class="completed item">
             <div class="item-upper-wrapper">
-                <h2 class="item-title">Example Item</h2>
+                <h2 class="item-title">Add priority meter to these widgets</h2>
                 <p class="item-type-text"></p>
             </div>
-            <p class="item-description">Lorem ipsum dolor sit amet, consectetur
-                adipiscing elit. Nam semper lectus velit, eget efficitur elit
-                vestibulum at. Maecenas commodo neque.</p>
+            <p class="item-description">A small meter at the bottom of roadmap
+                item widgets that indicates the current priority and importance
+                of that item. It still needs some small touch ups, but it's
+                pretty much done.<br>Example priority meter below:</p>
+            <div class="priority-meter" data-priority="5">
+                <div class="priority-icon-1"></div>
+                <div class="priority-icon-2"></div>
+                <div class="priority-icon-3"></div>
+                <div class="priority-icon-4"></div>
+                <div class="priority-icon-5"></div>
+            </div>
+            <p class="item-description">Here's another example with a priority
+            of 3 instead of 5:</p>
+            <div class="priority-meter" data-priority="3">
+                <div class="priority-icon-1"></div>
+                <div class="priority-icon-2"></div>
+                <div class="priority-icon-3"></div>
+                <div class="priority-icon-4"></div>
+                <div class="priority-icon-5"></div>
+            </div>
+
         </div>
 
         <hr>
 
 
-        <!-- =================== IN-PROGRESS =================== -->
+        <!-- =================== IN PROGRESS =================== -->
 
 
-        <h2 class="subtitle">In-Progress:</h2>
+        <h2 class="subtitle">In Progress:</h2>
 
         <div class="in-progress item">
             <div class="item-upper-wrapper">
@@ -64,6 +93,13 @@
                 • Add widgets for the rest of the things on the todo list.<br>
                 • Finish adjusting the styling for the page.<br>
                 • Add a priority meter for all items not live or shelved.</p>
+            <div class="priority-meter" data-priority="4">
+                <div class="priority-icon-1"></div>
+                <div class="priority-icon-2"></div>
+                <div class="priority-icon-3"></div>
+                <div class="priority-icon-4"></div>
+                <div class="priority-icon-5"></div>
+            </div>
         </div>
 
         <div class="in-progress item">
@@ -76,18 +112,7 @@
                 server, which is what's been holding back progress on this. I don't
                 know how to do this yet, even though I have a tiny bit of experience
                 with it.</p>
-        </div>
-
-        <div class="in-progress item">
-            <div class="item-upper-wrapper">
-                <h2 class="item-title">Add priority meter to these widgets</h2>
-                <p class="item-type-text"></p>
-            </div>
-            <p class="item-description">I forgot about it after I started, so
-                I never finished. <br>
-                If you can see this, then you're viewing via GitHub Pages. I'm not
-                going to add this widget to the main page.</p>
-            <div class="priority-meter">
+            <div class="priority-meter" data-priority="4">
                 <div class="priority-icon-1"></div>
                 <div class="priority-icon-2"></div>
                 <div class="priority-icon-3"></div>
@@ -116,6 +141,13 @@
                 Current themes (not final) are:<br>
                 Default, Lycentian, Kavani, Foralkan, and Ancient.
             </p>
+            <div class="priority-meter" data-priority="1">
+                <div class="priority-icon-1"></div>
+                <div class="priority-icon-2"></div>
+                <div class="priority-icon-3"></div>
+                <div class="priority-icon-4"></div>
+                <div class="priority-icon-5"></div>
+            </div>
         </div>
 
         <hr>
@@ -135,6 +167,13 @@
             relations chart/web for all factions who provided their faction
             relations. There will be filters, so you can filter out the smaller
             and/or inactive factions, or even only show small factions.</p>
+            <div class="priority-meter" data-priority="3">
+                <div class="priority-icon-1"></div>
+                <div class="priority-icon-2"></div>
+                <div class="priority-icon-3"></div>
+                <div class="priority-icon-4"></div>
+                <div class="priority-icon-5"></div>
+            </div>
         </div>
 
         <div class="next-priority item">
@@ -145,6 +184,13 @@
             <p class="item-description">Add account settings once accounts are
             implemented. Account settings will include font, theme, disabling
                 Starscape ads, and more.</p>
+            <div class="priority-meter" data-priority="3">
+                <div class="priority-icon-1"></div>
+                <div class="priority-icon-2"></div>
+                <div class="priority-icon-3"></div>
+                <div class="priority-icon-4"></div>
+                <div class="priority-icon-5"></div>
+            </div>
         </div>
 
         <hr>
@@ -164,6 +210,13 @@
                 website, <s>and a link to go back on this page.</s> Actually,
                 there's already a button that takes you there. <br>
                 This will be done once this roadmap page is complete. </p>
+            <div class="priority-meter" data-priority="2">
+                <div class="priority-icon-1"></div>
+                <div class="priority-icon-2"></div>
+                <div class="priority-icon-3"></div>
+                <div class="priority-icon-4"></div>
+                <div class="priority-icon-5"></div>
+            </div>
         </div>
 
         <div class="todo item">
@@ -175,6 +228,13 @@
                 be free—undecided) to post ads for their faction or an event.
                 Users can disable being shown these ads while logged in in their
                 account settings.</p>
+            <div class="priority-meter" data-priority="1">
+                <div class="priority-icon-1"></div>
+                <div class="priority-icon-2"></div>
+                <div class="priority-icon-3"></div>
+                <div class="priority-icon-4"></div>
+                <div class="priority-icon-5"></div>
+            </div>
         </div>
 
         <hr>
