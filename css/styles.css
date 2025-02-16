@@ -181,9 +181,45 @@ footer a:hover {
     margin-top: 10px;
 }
 
+.description-wrapper {
+    max-height: 155px;
+    overflow: hidden;
+    position: relative;
+    transition: max-height 0.3s ease-in-out;
+
+    /* Create a transparent fading effect */
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 75%, rgba(0, 0, 0, 0)); /* Shut, WebStorm. There is no error here according to chatGPT --> */
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 75%, rgba(0, 0, 0, 0));
+}
+
+/* Remove fade when expanded */
+.description-wrapper.expanded {
+    -webkit-mask-image: none;
+    mask-image: none;
+}
+
+.show-more {
+    display: block;
+    color: darkgray;
+    font-size: medium;
+    cursor: pointer;
+    margin-top: 5px;
+    text-align: start;
+    user-select: none;
+}
+
+
 .item-description {
     font-size: 16px !important;
     margin-bottom: 10px !important;
+}
+
+.item-description + ul {
+    text-align: start;
+}
+
+.item-description + ul li small {
+    font-size: x-small;
 }
 
 .item-upper-wrapper {

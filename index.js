@@ -72,23 +72,50 @@ document.addEventListener("DOMContentLoaded", function() {
                 icon.style.backgroundColor = `var(--priority-${iconPriority})`;
             } else {
                 // Set icons beyond the priority to gray
-                icon.style.backgroundColor = 'dimgray'; //test
+                icon.style.backgroundColor = 'dimgray';
             }
         });
 
         // Update the tooltip text based on priority value
         const priorityText = [
-            'Minimal',  // Priority 1
-            'Low',      // Priority 2
-            'Medium',   // Priority 3
-            'High',     // Priority 4
-            'Urgent'    // Priority 5
+            'Minimal', // Priority 1
+            'Low',     // Priority 2
+            'Medium',  // Priority 3
+            'High',    // Priority 4
+            'Urgent'   // Priority 5
         ];
 
         priorityMeter.setAttribute('data-tooltip', priorityText[priorityValue - 1]);
     }
 
-// Run the function for each priority meter
+    // Run the function for each priority meter
     document.querySelectorAll('.priority-meter').forEach(updatePriorityIcons);
 
+    // code for show more spans
+    document.querySelectorAll(".toggle").forEach((toggle) => {
+        const wrapper = toggle.previousElementSibling; // Find the sibling before the toggle button
+
+        if (!wrapper || !wrapper.classList.contains("description-wrapper")) {
+            console.warn("No matching .description-wrapper found for", toggle);
+            return; // Skip if no matching description-wrapper
+        }
+
+        // Check if the content overflows the 155px limit by at least 5px
+        if (wrapper.scrollHeight <= 160) {
+            toggle.style.display = "none"; // Hide the button if content fits
+            wrapper.classList.add("expanded");
+        }
+
+        toggle.addEventListener("click", function () {
+            if (wrapper.classList.contains("expanded")) {
+                wrapper.classList.remove("expanded");
+                wrapper.style.maxHeight = "155px";
+                this.textContent = "Show More";
+            } else {
+                wrapper.classList.add("expanded");
+                wrapper.style.maxHeight = wrapper.scrollHeight + "px";
+                this.textContent = "Show Less";
+            }
+        });
+    });
 });
