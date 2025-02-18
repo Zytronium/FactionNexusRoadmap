@@ -2,22 +2,17 @@ document.addEventListener("DOMContentLoaded", function() {
     // Animate loading certain elements
     document.querySelectorAll(".animate-vertically-on-load").forEach(element => {
         element.style.overflow = "hidden";
-        element.style.transition = "height 2s ease";
+        element.style.transition = "height 2.5s ease";
         element.style.visibility = "hidden";
 
         // wait 1 millisecond before measuring height to ensure accurate measurement.
         setTimeout(() => {
-            // Measure the full height plus padding and margins
+            // Measure the full height minus padding and ignoring margins
             let computedStyle = window.getComputedStyle(element);
             let paddingTop = parseFloat(computedStyle.paddingTop);
             let paddingBottom = parseFloat(computedStyle.paddingBottom);
-            let marginTop = parseFloat(computedStyle.marginTop);
-            let marginBottom = parseFloat(computedStyle.marginBottom);
             let totalHeight = element.clientHeight - paddingTop - paddingBottom;
 
-            console.log(`total height: ${totalHeight}`);
-            console.log(`client height: ${element.clientHeight}`);
-            console.log(`just height: ${parseFloat(computedStyle.height)}`);
             // Set initial height to 0
             element.style.height = "0px";
             element.style.visibility = "";
@@ -38,10 +33,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 paddingBottom = parseFloat(computedStyle.paddingBottom);
                 totalHeight = element.clientHeight - paddingTop - paddingBottom;
 
-                console.log(`total height: ${totalHeight}`);
-                console.log(`client height: ${element.clientHeight}`);
-                console.log(`just height: ${parseFloat(computedStyle.height)}`);
-            }, 2000);
+            }, 2500);
 
             element.classList.remove("animate-vertically-on-load");
         }, 1) // 1 ms delay before doing all of this. Explanation above.
