@@ -116,27 +116,6 @@
             </div>
         </div>
 
-        <div class="in-progress item">
-            <div class="item-upper-wrapper">
-                <h2 class="item-title">Account Settings</h2>
-                <p class="item-type-text"></p>
-            </div>
-            <div class="description-wrapper">
-                <p class="item-description">Add account settings once accounts
-                    are implemented. Account settings will include font, theme,
-                    disabling Starscape ads, and more.</p>
-            </div>
-            <span class="show-more toggle">Show More</span>
-            <p class="item-description">Priority:</p>
-            <div class="priority-meter" data-priority="4">
-                <div class="priority-icon-1"></div>
-                <div class="priority-icon-2"></div>
-                <div class="priority-icon-3"></div>
-                <div class="priority-icon-4"></div>
-                <div class="priority-icon-5"></div>
-            </div>
-        </div>
-
         <hr>
 
 
@@ -144,37 +123,6 @@
 
 
         <h2 class="subtitle">On Hold:</h2>
-
-        <div class="on-hold item">
-            <div class="item-upper-wrapper">
-                <h2 class="item-title">Create themes</h2>
-                <p class="item-type-text"></p>
-            </div>
-            <div class="description-wrapper">
-                <p class="item-description">Themes will be possible to select
-                    from user settings of logged-in users once logging in via
-                    Discord is functional. We will also need to implement a way
-                    to apply the theme. I haven't worked that part out yet.<br>
-                    Current themes (not final) are:<br>Default, Lycentian,
-                    Kavani, Foralkan, and Ancient.
-                    <br>
-                    <strong>Reason for being on hold:</strong>
-                    <br>
-                    Account settings are required to resume development on this
-                    feature.
-                </p>
-            </div>
-            <span class="show-more toggle">Show More</span>
-            <p class="item-description">Priority:</p>
-            <div class="priority-meter" data-priority="1">
-                <div class="priority-icon-1"></div>
-                <div class="priority-icon-2"></div>
-                <div class="priority-icon-3"></div>
-                <div class="priority-icon-4"></div>
-                <div class="priority-icon-5"></div>
-            </div>
-        </div>
-
         <div class="on-hold item">
             <div class="item-upper-wrapper">
                 <h2 class="item-title">Integrated Forms</h2>
@@ -219,15 +167,38 @@
 
         <div class="next-priority item">
             <div class="item-upper-wrapper">
-                <h2 class="item-title">Faction Relation Chart</h2>
+                <h2 class="item-title">Markdown formatting support in faction info pages</h2>
                 <p class="item-type-text"></p>
             </div>
             <div class="description-wrapper">
-                <p class="item-description">Create an auto-generated faction
-                    relations chart/web for all factions who provided their
-                    faction relations. There will be filters, so you can filter
-                    out the smaller and/or inactive factions, or even only show
-                    small factions.</p>
+                <p class="item-description">Users who upload data like news
+                    articles and factions should be able to use markdown
+                    formatting in certain fields, like the faction description
+                    for example.</p>
+            </div>
+            <span class="show-more toggle">Show More</span>
+            <p class="item-description">Priority:</p>
+            <div class="priority-meter" data-priority="2">
+                <div class="priority-icon-1"></div>
+                <div class="priority-icon-2"></div>
+                <div class="priority-icon-3"></div>
+                <div class="priority-icon-4"></div>
+                <div class="priority-icon-5"></div>
+            </div>
+        </div>
+
+        <div class="next-priority item">
+            <div class="item-upper-wrapper">
+                <h2 class="item-title">Hyperlink support in faction info pages</h2>
+                <p class="item-type-text"></p>
+            </div>
+            <div class="description-wrapper">
+                <p class="item-description">Links should be automatically
+                    detected (for example, when they contain "https://" or
+                    "http://"), and turned into
+                    <a href="https://youtu.be/pyoURHR-g4U">clickable links</a>
+                    in faction info pages and news articles.
+                </p>
             </div>
             <span class="show-more toggle">Show More</span>
             <p class="item-description">Priority:</p>
@@ -247,6 +218,93 @@
 
 
         <h2 class="subtitle">Todo:</h2>
+
+        <div class="todo item">
+            <div class="item-upper-wrapper">
+                <h2 class="item-title">Switch to Backend Server</h2>
+                <p class="item-type-text"></p>
+            </div>
+            <div class="description-wrapper">
+                <p class="item-description">Switch from static pages to using
+                a framework like Flask or React to dynamically host and load
+                pages. In essence, this allows quicker dynamic loading of pages
+                like news articles and allows search engines and bots to properly
+                read the content of these pages (rather than seeing "loading
+                headline... loading author... loading content..."). Additionally,
+                this allows for easier and quicker development of such pages.</p>
+            </div>
+            <span class="show-more toggle">Show More</span>
+            <p class="item-description">Priority:</p>
+            <div class="priority-meter" data-priority="3">
+                <div class="priority-icon-1"></div>
+                <div class="priority-icon-2"></div>
+                <div class="priority-icon-3"></div>
+                <div class="priority-icon-4"></div>
+                <div class="priority-icon-5"></div>
+            </div>
+        </div>
+
+        <div class="todo item">
+            <div class="item-upper-wrapper">
+                <h2 class="item-title">More Advanced Account Settings</h2>
+                <p class="item-type-text"></p>
+            </div>
+            <div class="description-wrapper">
+                <p class="item-description">Basic user settings have already
+                    been implemented, and can even be changed for logged out users.
+                    However, as of writing this, there are only two settings that
+                    can be changed, settings are only saved to the current device,
+                    and settings are loaded based on a basic account system that
+                    is not secure enough to be used with future planned features.
+                    Improved account settings should sync with each account globally
+                    for logged in users across all devices and should work with a
+                    future account system that stores Discord login data in a more
+                    secure manner. (The current system does not put your account
+                    at any risk, but future features would risk people spoofing
+                    who they are logged in to, causing security issues for this
+                    website, not your Discord account)<br>
+                    <br>
+                    That brings us to our next item listed below: Improved
+                    account system.</p>
+            </div>
+            <span class="show-more toggle">Show More</span>
+            <p class="item-description">Priority:</p>
+            <div class="priority-meter" data-priority="3">
+                <div class="priority-icon-1"></div>
+                <div class="priority-icon-2"></div>
+                <div class="priority-icon-3"></div>
+                <div class="priority-icon-4"></div>
+                <div class="priority-icon-5"></div>
+            </div>
+        </div>
+
+        <div class="todo item">
+            <div class="item-upper-wrapper">
+                <h2 class="item-title">Improved Account System</h2>
+                <p class="item-type-text"></p>
+            </div>
+            <div class="description-wrapper">
+                <p class="item-description">While the current system does not
+                    put your Discord account at any risk, it is vulnerable to
+                    people spoofing who they are logged in to on our website.
+                    While this currently cannot be abused (as the only thing
+                    this does is tell the account dropdown menu to say the
+                    fake user's name instead of the real one), it needs to
+                    be fixed before certain features are introduced with would
+                    create opportunities to abuse this. Additionally, this new
+                    improved account system would allow settings to sync across
+                    any device you're logged in on rather than just one.</p>
+            </div>
+            <span class="show-more toggle">Show More</span>
+            <p class="item-description">Priority:</p>
+            <div class="priority-meter" data-priority="4">
+                <div class="priority-icon-1"></div>
+                <div class="priority-icon-2"></div>
+                <div class="priority-icon-3"></div>
+                <div class="priority-icon-4"></div>
+                <div class="priority-icon-5"></div>
+            </div>
+        </div>
 
         <div class="todo item">
             <div class="item-upper-wrapper">
@@ -365,43 +423,19 @@
 
         <div class="todo item">
             <div class="item-upper-wrapper">
-                <h2 class="item-title">Hyperlink support in faction info pages</h2>
+                <h2 class="item-title">Faction Relation Chart</h2>
                 <p class="item-type-text"></p>
             </div>
             <div class="description-wrapper">
-                <p class="item-description">Links should be automatically
-                    detected (for example, when they contain "https://" or
-                    "http://"), and turned into
-                    <a href="https://youtu.be/pyoURHR-g4U">clickable links</a>
-                    in faction info pages. (And news articles when they
-                    are fully added)
-                </p>
+                <p class="item-description">Create an auto-generated faction
+                    relations chart/web for all factions who provided their
+                    faction relations. There will be filters, so you can filter
+                    out the smaller and/or inactive factions, or even only show
+                    small factions.</p>
             </div>
             <span class="show-more toggle">Show More</span>
             <p class="item-description">Priority:</p>
             <div class="priority-meter" data-priority="3">
-                <div class="priority-icon-1"></div>
-                <div class="priority-icon-2"></div>
-                <div class="priority-icon-3"></div>
-                <div class="priority-icon-4"></div>
-                <div class="priority-icon-5"></div>
-            </div>
-        </div>
-
-        <div class="todo item">
-            <div class="item-upper-wrapper">
-                <h2 class="item-title">Markdown formatting support in faction info pages</h2>
-                <p class="item-type-text"></p>
-            </div>
-            <div class="description-wrapper">
-                <p class="item-description">Users who upload data like news
-                    articles and factions should be able to use markdown
-                    formatting in certain fields, like the faction description
-                    for example.</p>
-            </div>
-            <span class="show-more toggle">Show More</span>
-            <p class="item-description">Priority:</p>
-            <div class="priority-meter" data-priority="2">
                 <div class="priority-icon-1"></div>
                 <div class="priority-icon-2"></div>
                 <div class="priority-icon-3"></div>
@@ -465,6 +499,38 @@
 
         <h2 class="subtitle">Live:</h2>
 
+
+        <div class="live item">
+            <div class="item-upper-wrapper">
+                <h2 class="item-title">Create themes</h2>
+                <p class="item-type-text"></p>
+            </div>
+            <div class="description-wrapper">
+                <p class="item-description">Themes will be possible to select
+                    from user settings of logged-in users once logging in via
+                    Discord is functional. We will also need to implement a way
+                    to apply the theme. I haven't worked that part out yet.<br>
+                    Current themes are:<br>Default, Lycentian, Kavani, Foralkan,
+                    and Ancient.<br>An "Ethereal" theme was also worked on, and
+                    <em>may</em> be added soon.
+                </p>
+            </div>
+            <span class="show-more toggle">Show More</span>
+        </div>
+
+        <div class="live item">
+            <div class="item-upper-wrapper">
+                <h2 class="item-title">Account Settings</h2>
+                <p class="item-type-text"></p>
+            </div>
+            <div class="description-wrapper">
+                <p class="item-description">Add account settings once accounts
+                    are implemented. Account settings will include font, theme,
+                    disabling Starscape ads, and more.</p>
+            </div>
+            <span class="show-more toggle">Show More</span>
+        </div>
+
         <div class="live item">
             <div class="item-upper-wrapper">
                 <h2 class="item-title">Get Discord Login Working</h2>
@@ -493,14 +559,6 @@
             </p>
         </div>
         <span class="show-more toggle">Show More</span>
-        <p class="item-description">Priority:</p>
-        <div class="priority-meter" data-priority="2">
-            <div class="priority-icon-1"></div>
-            <div class="priority-icon-2"></div>
-            <div class="priority-icon-3"></div>
-            <div class="priority-icon-4"></div>
-            <div class="priority-icon-5"></div>
-        </div>
     </div>
 
         <div class="live item">
@@ -560,13 +618,12 @@
 
         <div class="shelved item">
             <div class="item-upper-wrapper">
-                <h2 class="item-title">Example Item</h2>
+                <h2 class="item-title">Nothing</h2>
                 <p class="item-type-text"></p>
             </div>
             <div class="description-wrapper">
-                <p class="item-description">Lorem ipsum dolor sit amet,
-                    consectetur adipiscing elit. Nam semper lectus velit, eget
-                    efficitur elit vestibulum at. Maecenas commodo neque.
+                <p class="item-description">Nothing has been shelved yet. This
+                    item is only here to show that this section exists.
                 </p>
             </div>
             <span class="show-more toggle">Show More</span>
