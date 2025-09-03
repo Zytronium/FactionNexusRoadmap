@@ -88,20 +88,67 @@
 
         <div class="in-progress item">
             <div class="item-upper-wrapper">
-                <h2 class="item-title">Improved Account System (Email & Password)</h2>
+                <h2 class="item-title">Pre-Render Variable Content</h2>
                 <p class="item-type-text"></p>
             </div>
             <div class="description-wrapper">
-                <p class="item-description">While the current system does not
-                    put your Discord account at any risk, it is vulnerable to
-                    people spoofing who they are logged in to on our website.
-                    While this currently cannot be abused (as the only thing
-                    this does is tell the account dropdown menu to say the
-                    fake user's name instead of the real one), it needs to
-                    be fixed before certain features are introduced with would
-                    create opportunities to abuse this. Additionally, this new
-                    improved account system would allow settings to sync across
-                    any device you're logged in on rather than just one.</p>
+                <p class="item-description">Before switching to a backend
+                    server, the website had to load in user generated content
+                    into template pages right after the user loads the page.
+                    There is a visible delay before that content is loaded,
+                    during which, the user can see placeholder content.
+                    Additionally, the content sometimes wouldn't load until
+                    you refreshed the page, and bots and crawlers don't load
+                    the content at all. This was not good for search engine
+                    optimization.<br>
+                    <br>
+                    With a backend server now in place, this content can be
+                    loaded into a template <strong>before</strong> the page
+                    is served to the user. Additionally, the backend server
+                    allows for cleaner, more SEO-friendly URLs that don't
+                    rely on hacky 404 pages or weird URL structures.<br>
+                    <br>
+                    Furthermore, this allows to load content like navbar &
+                    footer, as well as appearance settings before the page
+                    is served to the user.<br>
+                    <br>
+                    URLs like /article?id=some-id will be moving to URLs like
+                    /article/some-id, and dynamic metadata, like article
+                    previews, will now be loaded into link embeds for each
+                    unique article, publisher profile, faction page, etc.
+                </p>
+            </div>
+            <span class="show-more toggle">Show More</span>
+            <p class="item-description">Priority:</p>
+            <div class="priority-meter" data-priority="3">
+                <div class="priority-icon-1"></div>
+                <div class="priority-icon-2"></div>
+                <div class="priority-icon-3"></div>
+                <div class="priority-icon-4"></div>
+                <div class="priority-icon-5"></div>
+            </div>
+        </div>
+
+        <div class="in-progress item">
+            <div class="item-upper-wrapper">
+                <h2 class="item-title">Admin Panel</h2>
+                <p class="item-type-text"></p>
+            </div>
+            <div class="description-wrapper">
+                <p class="item-description">With the new account system in,
+                    place, the website needs an admin panel to make doing
+                    cool admin stuff easier and more accessible to admins.
+                    This admin panel will be strictly available only to
+                    admin accounts. This panel will be used for things like
+                    managing other accounts, approving new faction uploads,
+                    moderating news articles, providing account support,
+                    granting or revoking special user permissions, dealing
+                    with suspicious or malicious activity, and so on.<br>
+                    <br>
+                    The admin panel must look cool because admin stuff = cool.
+                    When an admin opens the admin panel, the design of the
+                    admin panel alone should make the user feel powerful.
+                </p>
             </div>
             <span class="show-more toggle">Show More</span>
             <p class="item-description">Priority:</p>
@@ -150,7 +197,7 @@
 
         <div class="in-progress item">
             <div class="item-upper-wrapper">
-                <h2 class="item-title">Make the News page fully functional</h2>
+                <h2 class="item-title">Make the News Page Fully Functional</h2>
                 <p class="item-type-text"></p>
             </div>
             <div class="description-wrapper">
@@ -160,7 +207,7 @@
                     articles, and users should be able to apply to become a news
                     publisher. Users also need to be able to report or share
                     articles. <br>
-                    These things cannot be done without Discord login,
+                    These things cannot be done without account login,
                     integrated forms and possibly a backend server. <br>
                     Some of these features have been completed. Some others are
                     on hold. There are also some features I have planned that
@@ -217,38 +264,6 @@
             <span class="show-more toggle">Show More</span>
             <p class="item-description">Priority:</p>
             <div class="priority-meter" data-priority="3">
-                <div class="priority-icon-1"></div>
-                <div class="priority-icon-2"></div>
-                <div class="priority-icon-3"></div>
-                <div class="priority-icon-4"></div>
-                <div class="priority-icon-5"></div>
-            </div>
-        </div>
-
-        <div class="on-hold item">
-            <div class="item-upper-wrapper">
-                <h2 class="item-title">Switch to Backend Server</h2>
-                <p class="item-type-text"></p>
-            </div>
-            <div class="description-wrapper">
-                <p class="item-description">Switch from static pages to using
-                    a framework like Express or React to dynamically host and load
-                    pages. In essence, this allows quicker dynamic loading of pages
-                    like news articles and allows search engines and bots to properly
-                    read the content of these pages (rather than seeing "loading
-                    headline... loading author... loading content..."). Additionally,
-                    this allows for easier and quicker development of such pages.<br>
-                    <br>
-                    <strong>Reason for being on hold:</strong>
-                    <br>
-                    While I have finally figured out how to do this for free, I
-                    have also figured out how to implement certain features
-                    without needing a backend.
-                </p>
-            </div>
-            <span class="show-more toggle">Show More</span>
-            <p class="item-description">Priority:</p>
-            <div class="priority-meter" data-priority="2">
                 <div class="priority-icon-1"></div>
                 <div class="priority-icon-2"></div>
                 <div class="priority-icon-3"></div>
@@ -353,8 +368,8 @@
 
         <div class="todo item">
             <div class="item-upper-wrapper">
-                <h2 class="item-title">Add more "sort by" options for
-                    searching</h2>
+                <h2 class="item-title">Add More "Sort By" Options For
+                    Searching</h2>
                 <p class="item-type-text"></p>
             </div>
             <div class="description-wrapper">
@@ -403,7 +418,7 @@
 
         <div class="todo item">
             <div class="item-upper-wrapper">
-                <h2 class="item-title">Starscape ads</h2>
+                <h2 class="item-title">Starscape Ads</h2>
                 <p class="item-type-text"></p>
             </div>
             <div class="description-wrapper">
@@ -411,27 +426,6 @@
                     it'll be free—undecided) to post ads for their faction or an
                     event. Users can disable being shown these ads while logged
                     in in their account settings.</p>
-            </div>
-            <span class="show-more toggle">Show More</span>
-            <p class="item-description">Priority:</p>
-            <div class="priority-meter" data-priority="2">
-                <div class="priority-icon-1"></div>
-                <div class="priority-icon-2"></div>
-                <div class="priority-icon-3"></div>
-                <div class="priority-icon-4"></div>
-                <div class="priority-icon-5"></div>
-            </div>
-        </div>
-
-        <div class="todo item">
-            <div class="item-upper-wrapper">
-                <h2 class="item-title">Get Error pages working</h2>
-                <p class="item-type-text"></p>
-            </div>
-            <div class="description-wrapper">
-                <p class="item-description">As of right now, there are several
-                different custom error pages designed, but only the 404 page
-                is actually getting used.</p>
             </div>
             <span class="show-more toggle">Show More</span>
             <p class="item-description">Priority:</p>
@@ -472,7 +466,7 @@
 
         <div class="todo item">
             <div class="item-upper-wrapper">
-                <h2 class="item-title">Faction groups</h2>
+                <h2 class="item-title">Faction Groups</h2>
                 <p class="item-type-text"></p>
             </div>
             <div class="description-wrapper">
@@ -501,6 +495,57 @@
 
         <div class="live item">
             <div class="item-upper-wrapper">
+                <h2 class="item-title">Improved Account System (Email & Password)</h2>
+                <p class="item-type-text"></p>
+            </div>
+            <div class="description-wrapper">
+                <p class="item-description">While the previous system does not
+                    put your Discord account at any risk, it is vulnerable to
+                    people spoofing who they are logged in to on our website.
+                    While this currently cannot be abused (as the only thing
+                    this does is tell the account dropdown menu to say the
+                    fake user's name instead of the real one), it needs to
+                    be fixed before certain features are introduced which would
+                    create opportunities to abuse this. Additionally, this new
+                    improved account system would allow settings to sync across
+                    any device you're logged in on rather than just one.</p>
+            </div>
+            <span class="show-more toggle">Show More</span>
+        </div>
+
+        <div class="live item">
+            <div class="item-upper-wrapper">
+                <h2 class="item-title">Get Error Pages Working</h2>
+                <p class="item-type-text"></p>
+            </div>
+            <div class="description-wrapper">
+                <p class="item-description">When this item was added to the roadmap, there
+                    were several different custom error pages designed, but only the 404 page
+                    was actually getting used.</p>
+            </div>
+            <span class="show-more toggle">Show More</span>
+        </div>
+
+        <div class="live item">
+            <div class="item-upper-wrapper">
+                <h2 class="item-title">Switch to Backend Server</h2>
+                <p class="item-type-text"></p>
+            </div>
+            <div class="description-wrapper">
+                <p class="item-description">Switch from static pages to using
+                    a framework like Express or React to dynamically host and load
+                    pages. In essence, this allows quicker dynamic loading of pages
+                    like news articles and allows search engines and bots to properly
+                    read the content of these pages (rather than seeing "loading
+                    headline... loading author... loading content..."). Additionally,
+                    this allows for easier and quicker development of such pages.
+                </p>
+            </div>
+            <span class="show-more toggle">Show More</span>
+        </div>
+
+        <div class="live item">
+            <div class="item-upper-wrapper">
                 <h2 class="item-title">Remodel Home page</h2>
                 <p class="item-type-text"></p>
             </div>
@@ -515,7 +560,7 @@
 
         <div class="live item">
             <div class="item-upper-wrapper">
-                <h2 class="item-title">Markdown formatting support in user-generated content</h2>
+                <h2 class="item-title">Markdown Formatting Support in User-Generated Content</h2>
                 <p class="item-type-text"></p>
             </div>
             <div class="description-wrapper">
@@ -544,7 +589,7 @@
 
         <div class="live item">
             <div class="item-upper-wrapper">
-                <h2 class="item-title">Create themes</h2>
+                <h2 class="item-title">Create Themes</h2>
                 <p class="item-type-text"></p>
             </div>
             <div class="description-wrapper">
@@ -592,7 +637,7 @@
 
         <div class="live item">
         <div class="item-upper-wrapper">
-            <h2 class="item-title">Link here from the main website</h2>
+            <h2 class="item-title">Link Here From the Main Website</h2>
             <p class="item-type-text"></p>
         </div>
         <div class="description-wrapper">
@@ -605,7 +650,7 @@
 
         <div class="live item">
             <div class="item-upper-wrapper">
-                <h2 class="item-title">Put TSA'a faction politics charts in the Diplomacy page until our own auto-updating chart is ready</h2>
+                <h2 class="item-title">Put TSA's Faction Politics Charts in the Diplomacy Page Until Our Own Auto-Updating Chart is Ready</h2>
                 <p class="item-type-text"></p>
             </div>
             <div class="description-wrapper">
@@ -620,7 +665,7 @@
 
         <div class="live item">
             <div class="item-upper-wrapper">
-                <h2 class="item-title">Add priority meter to these widgets</h2>
+                <h2 class="item-title">Add Priority Meter to These Widgets</h2>
                 <p class="item-type-text"></p>
             </div>
             <div class="description-wrapper">
